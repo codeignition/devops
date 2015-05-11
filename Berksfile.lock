@@ -4,8 +4,8 @@ DEPENDENCIES
   git
   mysql
   nginx
-  server
-    path: site-cookbooks/server
+  socialmind
+    path: site-cookbooks/socialmind
 
 GRAPH
   apt (2.7.0)
@@ -19,6 +19,11 @@ GRAPH
     dmg (>= 0.0.0)
     windows (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  mongodb (0.16.2)
+    apt (>= 1.8.2)
+    python (>= 0.0.0)
+    runit (>= 1.5.0)
+    yum (>= 3.0)
   mysql (6.0.21)
     smf (>= 0.0.0)
     yum-mysql-community (>= 0.0.0)
@@ -31,18 +36,21 @@ GRAPH
     yum-epel (~> 0.3)
   ohai (2.0.1)
   packagecloud (0.0.17)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   rbac (1.0.3)
   rsyslog (1.15.0)
   runit (1.6.0)
     packagecloud (>= 0.0.0)
-  server (0.1.0)
+  smf (2.2.6)
+    rbac (>= 1.0.1)
+  socialmind (0.1.0)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     git (>= 0.0.0)
-    mysql (>= 0.0.0)
+    mongodb (>= 0.0.0)
     nginx (>= 0.0.0)
-  smf (2.2.6)
-    rbac (>= 1.0.1)
   windows (1.36.6)
     chef_handler (>= 0.0.0)
   yum (3.5.4)
